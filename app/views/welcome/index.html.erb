@@ -1,0 +1,86 @@
+  
+  <%= render "jumbotron" %>
+  <div class="container-fluid" id="articles">
+    <div class="content">
+        <% @arrposts = @posts.take(8) %>
+          <div class="card-columns" id="trio">
+
+            <div class="card" id="col-card">
+              <%= link_to post_path(@arrposts[0].id) do %>
+                <img class="card-img-top img-fluid" style="height: 260px; width: 100%; display: block" data-src=<%= image_tag "book.jpg" %>
+              <% end %>
+              <div class="card-block">
+                <span class="date"><%= (@arrposts[0].created_at).strftime("%B %d, %Y") %> </span>
+                <h4 class="card-title"><%= @arrposts[0].title %></h4>
+                <p class="card-text"> <%= @arrposts[0].description %> </p>
+              </div> 
+            </div>
+
+             <div class="card" id="col-card">
+              <%= link_to post_path(@arrposts[1].id) do %>
+                <img class="card-img-top img-fluid" style="height: 340px; width: 100%; display: block" data-src=<%= image_tag "mug2.jpeg" %>
+              <% end %>
+              <div class="card-block">
+                <span class="date"><%= (@arrposts[1].created_at).strftime("%B %d, %Y") %></span>
+                <h4 class="card-title"><%= @arrposts[1].title %></h4>
+                <p class="card-text"> <%= @arrposts[1].description %> </p>
+              </div> 
+            </div>
+
+             <div class="card" id="col-card">
+              <%= link_to post_path(@arrposts[2].id) do %>
+                <img class="card-img-top img-fluid" style="height: 400px; width: 100%; display: block" data-src=<%= image_tag "sock.jpg" %>
+              <% end %>
+              <div class="card-block">
+                <span class="date"><%= (@arrposts[2].created_at).strftime("%B %d, %Y") %></span>
+                <h4 class="card-title"><%= @arrposts[2].title %></h4>
+                <p class="card-text"> <%= @arrposts[2].description %> </p>
+              </div> 
+            </div>
+
+             <div class="card" id="col-card4">
+              <%= link_to post_path(@arrposts[3].id) do %>
+                <img class="card-img-top img-fluid" style="height: 300px; width: 100%; display: block" data-src=<%= image_tag "sock.jpg" %>
+              <% end %>
+              <div class="card-block">
+                <span class="date"><%= (@arrposts[3].created_at).strftime("%B %d, %Y") %></span>
+                <h4 class="card-title"><%= @arrposts[3].title %></h4>
+                <p class="card-text"> <%= @arrposts[3].description %> </p>
+              </div> 
+            </div>
+
+             <div class="card" id="col-card">
+              <%= link_to post_path(@arrposts[4].id) do %>
+                <img class="card-img-top img-fluid" style="height: 240px; width: 100%; display: block" data-src=<%= image_tag "colar.jpg" %>
+              <% end %>
+              <div class="card-block">
+                <span class="date"><%= (@arrposts[4].created_at).strftime("%B %d, %Y") %></span>
+                <h4 class="card-title"><%= @arrposts[4].title %></h4>
+                <p class="card-text"> <%= @arrposts[4].description %> </p>
+              </div> 
+            </div>
+
+             <div class="card" id="col-card">
+              <%= link_to post_path(@arrposts[5].id) do %>
+                <img class="card-img-top img-fluid" style="height: 300px; width: 100%; display: block" data-src=<%= image_tag "sock.jpg" %>
+              <% end %>
+              <div class="card-block">
+                <span class="date"><%= (@arrposts[5].created_at).strftime("%B %d, %Y") %></span>
+                <h4 class="card-title"><%= @arrposts[5].title %></h4>
+                <p class="card-text"> <%= @arrposts[5].description %> </p>
+              </div> 
+            </div>
+
+             <div class="card" id="col-card">
+              <%= link_to post_path(@arrposts[6].id) do %>
+                <img class="card-img-top img-fluid" style="height: 300px; width: 100%; display: block" data-src=<%= image_tag "bag.jpg" %>
+              <% end %>
+              <div class="card-block">
+                <span class="date"> <%= (@arrposts[6].created_at).strftime("%B %d, %Y") %></span>
+                <h4 class="card-title"><%= @arrposts[6].title %></h4>
+                <p class="card-text"> <%= @arrposts[6].description %> </p>
+              </div> 
+            </div>
+
+
+  </div>

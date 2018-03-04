@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro|Raleway|Felipa|Satisfy|Lobster|Dancing+Script|Lato"%>    
+    <title>Jane Austen Mania</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header">
+      <h1>
+        <%= link_to("Jane Mania", root_path, {style: "cursor: pointer"}) %>
+      </h1>
+      <nav class="links">
+          <ul>
+            <li>
+              <a style="cursor: pointer"><%= link_to "Home", root_path %></a>
+            </li>
+            <li>
+              <a style="cursor: pointer"><%= link_to "Quotes", quotes_path %></a>
+            </li>
+            <li>
+              <a style="cursor: pointer"><%= link_to "Books", books_path %></a>
+            </li>
+            <li>
+              <a style="cursor: pointer"><%= link_to "Gift ideas", posts_path %></a>
+            </li>
+          </ul>
+        </nav> 
+        <nav class="main">
+          <ul>
+            <li class="search">
+              <form id="search" method="get" action-"#" class>
+                <input type="text" name="query" placeholder="Search">
+              </form>
+              <a class="fa-search" href="#search"> Search</a>
+
+            </li>
+          </ul>
+        </nav>  
+      </header>
+    </div>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      2017 - BookMania
+       <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro|Raleway|Felipa|Satisfy|Lobster|Dancing+Script|Lato"%>    
+    <title>Jane Austen Mania</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+  <header id+"header">
+    <div class="wrap">
+    <nav class="navbar navbar-expand-xl">
+      <a class="navbar-brand" href="#">Jane Mania</a>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarLg">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="collapsingNavbarLg">
+          <ul class="navbar-nav">
+            <li class="nav-item" id="second">
+               <%= link_to "Quotes", quotes_path, class:"nav-link" %>
+            </li>
+            
+            <li class="nav-item" id="second">
+               <%= link_to "Books", books_path, class:"nav-link" %>
+            </li>
+            <li class="nav-item" id="second">
+                <%= link_to "Gift ideas", posts_path, class:"nav-link" %>
+            </li>
+          </ul>
+      </div>
+    <!--   <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="query" name="query" type="text" placeholder="Search">
+        <a class="fa-search" type="submit"></a>
+      </form> -->
+      <%= form_tag(search_index_path, method: "get") do %>
+        <%= text_field_tag :query, nil, placeholder: "Search ...", class: "form-control" %>
+        <%= submit_tag "", style: "display: none;" %>
+      <% end %>
+    </nav>
+    </div>
+  </header>
+  </div>
+  <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      2017 - BookMania
+       <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </footer>
+  </body>
+</html>

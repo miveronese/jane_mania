@@ -1,0 +1,10 @@
+<% @results.each do |r| %> 
+  <% if r.searchable_type == "Post" || r.searchable_type == "Book" %> 
+    <%= r.searchable.title %>
+  </br>
+    <%= r.searchable.description %>
+  </br
+  <% elsif r.searchable_type == "Quote" %>
+    <%= r.searchable.content %>
+  <% end %>
+<% end %>

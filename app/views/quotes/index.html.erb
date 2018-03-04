@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="quotes">
+      <% @quotes.each do |q| %>
+        <div class="card">
+          <blockquote class="card-block card-blockquote">
+            <p><%= q.content %></p>
+            <footer>
+              <small class="text-muted">
+                <cite title="Source Title">Jane Austen</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+      <% end %>
+  </div>
+</div>
