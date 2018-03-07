@@ -31,7 +31,7 @@ gem 'popper_js'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'sprockets-rails'
-gem 'rails_admin', '~> 1.2'
+gem 'rails_admin', '~> 1.3'
 gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
